@@ -120,6 +120,7 @@
 
 .about-inner {
   align-items: center;
+  // padding-right: 20px;
   @media #{$md-layout} {
     padding-top: 40px;
   }
@@ -152,9 +153,16 @@
 }
 
 .products-wrapper {
-  background-image: url(/assets/images/bgpage/BGADOC.jpg);
-  background-repeat: no-repeat;
+  background-color: red;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(/assets/images/bgpage/bgproducts.jpg);
+  height: 100vh;
+
+  @media #{$sm-layout} {
+    height: 150vh;
+  }
 }
 
 .drone-wrapper {
@@ -170,10 +178,26 @@
   }
 }
 .about-wrapper {
-  // background-image: url();
-  background-image: url(/assets/images/bgpage/WWDBG.png);
+  background-image: url(/assets/images/bgpage/bgwhoweare.png);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: center;
+  margin-top: 0;
+  height: 100vh;
+  width: 100vw;
+  @media #{$sm-layout} {
+    height: 150vh;
+  }
+  &.whatwedo {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/assets/images/bgpage/bgwhatwedo.jpg);
+  }
+  @media #{$laptop-device} {
+    background-size: contain;
+  }
   @media #{$sm-layout} {
     background-position: bottom;
   }
@@ -184,8 +208,11 @@
     align-items: center;
     justify-items: center;
     justify-content: center;
-    height: 100vh;
     z-index: 2;
+    height: 100vh;
+    @media #{$sm-layout} {
+      height: 40vh;
+    }
     img {
       border-radius: 8px;
 
@@ -200,7 +227,9 @@
         background-position: bottom;
       }
       @media #{$sm-layout} {
-        max-height: 280px;
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
         background-position: bottom;
       }
     }
